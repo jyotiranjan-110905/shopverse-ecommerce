@@ -14,7 +14,7 @@ export default function ProductGrid({ category, searchQuery, onQuickView }) {
         setLoading(true)
         setError('')
 
-        const response = await fetch('http://localhost:3000/products')
+        const response = await fetch(fetch('/api/products'))
 
         if (!response.ok) {
           throw new Error('Failed to fetch products')
